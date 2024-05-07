@@ -2,9 +2,9 @@ import './App.css';
 import Tippy from '@tippyjs/react';
 import { useState } from 'react';
 import Tabs from './Tab';
-
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
+import Calendar from './Calandar';
 
 
 
@@ -27,10 +27,11 @@ function App() {
 
   return (
     <div className="app">
-      <MyComponent />
+      <Calendar />
+    {/*   <MyComponent />
       <Tippy content={<Tabs items={tabs} />}   interactive={true} className='tippy-container'>
         <span>ddddd</span>
-      </Tippy>
+      </Tippy> */}
     </div>
   );
 }
@@ -39,9 +40,11 @@ function App() {
 function MyComponent() {
   const [value, setValue] = useState('');
 
-  console.log("value => ",value);
+  return (
+    <div>
 
-  return <ReactQuill theme="snow" value={value} onChange={setValue} />;
+    </div>
+  )
 }
 
 
